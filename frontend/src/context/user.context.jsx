@@ -53,7 +53,8 @@ export const UserProvider = ({ children }) => {
         <UserContext.Provider 
             value={{ 
                 user, 
-                login, // Use login instead of setUser directly
+                setUser, // Restore original setUser function
+                login, // Keep new login function for registration/login flows
                 clearUser, 
                 loading, 
                 setLoading, 
